@@ -1,16 +1,16 @@
 using App.Api.Contracts;
 using App.Application.Quotes.Commands.CreateQuote;
+using App.Application.Quotes.Commands.DeleteQuote;
 using App.Application.Quotes.Commands.UpdateQuote;
 using App.Contracts.Responses;
 using App.Application.Quotes.Queries.GetAllQuote;
 using App.Application.Quotes.Queries.GetByIdQuote;
+using App.Application.Quotes.Queries.GetRandomQuote;
 using App.Contracts.Requests;
 using App.Domain.Abstractions;
-using App.Domain.Core.Errors;
 using App.Domain.Core.Primitives.Maybe;
 using EventReminder.Domain.Core.Primitives.Maybe;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.Api.Controller;
@@ -22,9 +22,9 @@ public class QuoteController(IMediator mediator) : ApiController(mediator)
     [HttpGet(ApiRoutes.Quotes.GetById)]
     [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> GetById(Guid Id) =>
+    public async Task<IActionResult> GetById(Guid quoteId) =>
         await Maybe<GetQuoteByIdQuery>
-            .From(new GetQuoteByIdQuery(Id))
+            .From(new GetQuoteByIdQuery(quoteId))
             .Bind(query => Mediator.Send(query))
             .Match(Ok, NotFound);
 
@@ -55,6 +55,28 @@ public class QuoteController(IMediator mediator) : ApiController(mediator)
         await Maybe<CreateQuoteCommand>
             .From(new CreateQuoteCommand(request.Author, request.Text, request.Category))
             .Bind(command => Mediator.Send(command))
-            .Match(id =>Ok(id), () => BadRequest());
+            .Match(id =>Ok(id), BadRequest);
 
+    [HttpDelete(ApiRoutes.Quotes.Delete)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> Remove(Guid quoteId) =>
+        await Maybe<DeleteQuoteCommand>
+            .From(new DeleteQuoteCommand(quoteId))
+            .Bind(command => Mediator.Send(command))
+            .Match(id => Ok(id), BadRequest);
+    
+    [HttpGet(ApiRoutes.Quotes.Random)]
+    [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetRandom() =>
+        await Maybe<GetRandomQuoteQuery>
+            .From(new GetRandomQuoteQuery())
+            .Bind(q => Mediator.Send(q))
+            .Match(Ok, NotFound);
+    
+    
+    
+    
+    
 }

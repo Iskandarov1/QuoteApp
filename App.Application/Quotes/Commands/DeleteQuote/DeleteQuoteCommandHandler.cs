@@ -1,22 +1,23 @@
 using App.Application.Abstractions.Messaging;
+using App.Domain.Core.Primitives.Maybe;
 using App.Domain.Entities;
 
 namespace App.Application.Quotes.Commands.DeleteQuote;
 
-public class DeleteQuoteCommandHandler(IQuoteRepository quoteRepository) : ICommandHandler<DeleteQuoteCommand, bool>
+public class DeleteQuoteCommandHandler(IQuoteRepository quoteRepository) : ICommandHandler<DeleteQuoteCommand, Maybe<Guid>>
 {
-    public async Task<bool> Handle(DeleteQuoteCommand request, CancellationToken cancellationToken)
+    public async Task<Maybe<Guid>> Handle(DeleteQuoteCommand request, CancellationToken cancellationToken)
     {
         var quote = await quoteRepository.GetByIdAsync(request.QuoteId, cancellationToken);
         
         if (quote == null)
         {
-            return false;
+            return Maybe<Guid>.None;
         }
 
         await quoteRepository.DeleteAsync(quote, cancellationToken);
         await quoteRepository.SaveChangesAsync(cancellationToken);
 
-        return true;
+        return Maybe<Guid>.From(quote.Id);
     }
 }

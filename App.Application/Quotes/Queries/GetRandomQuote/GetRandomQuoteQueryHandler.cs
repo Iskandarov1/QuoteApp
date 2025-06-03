@@ -1,0 +1,35 @@
+using App.Application.Abstractions.Messaging;
+using App.Contracts.Responses;
+using App.Domain.Core.Primitives.Maybe;
+using App.Domain.Entities;
+
+namespace App.Application.Quotes.Queries.GetRandomQuote;
+
+public class GetRandomQuoteQueryHandler(IQuoteRepository quoteRepository) : IQueryHandler<GetRandomQuoteQuery, Maybe<QuoteResponse>>
+{
+    public async Task<Maybe<QuoteResponse>> Handle(GetRandomQuoteQuery request, CancellationToken cancellationToken)
+    {
+        var allQuotes = (await quoteRepository.GetAllAsync(cancellationToken)).ToList();
+        if (!allQuotes.Any() )
+        {
+            return Maybe<QuoteResponse>.None;
+        }
+
+        var randomIndex = new Random().Next(allQuotes.Count);
+        var q = allQuotes[randomIndex];
+
+        var respone = new QuoteResponse
+        {
+            Id = q.Id,
+            Author = q.Author.Value,
+            Text = q.Textt.Value,
+            Category = q.Category.Value,
+            CreatedAt = q.CreatedAt
+        };
+
+        return Maybe<QuoteResponse>.From(respone);
+
+
+
+    }
+}

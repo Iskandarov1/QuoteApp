@@ -1,5 +1,6 @@
 using App.Application.Abstractions.Messaging;
+using App.Domain.Core.Primitives.Maybe;
 
 namespace App.Application.Quotes.Commands.DeleteQuote;
 
-public abstract record DeleteQuoteCommand(Guid QuoteId) : ICommand<bool>;
+public record DeleteQuoteCommand(Guid QuoteId) :  ICommand<Maybe<Guid>>;

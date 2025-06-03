@@ -6,9 +6,10 @@ namespace App.Api.Contracts
         {
             public const string GetAll = "";
             public const string GetById = "{quoteId:guid}";
-            public const string Create = "quotes";
+            public const string Create = "quote";
             public const string Update = "{quoteId:guid}";
-            public const string Delete = "quotes/{quotesId:guid}";
+            public const string Delete = "{quoteId:guid}";
+            public const string Random = "random";
         }
         public static class Subscriptions
         {

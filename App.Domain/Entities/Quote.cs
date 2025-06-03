@@ -2,12 +2,13 @@ namespace App.Domain.Entities;
 using App.Domain.Abstractions;
 public class Quote : Entity
 {
+    private Quote(): base(Guid.Empty){}
     public Quote(Guid id, Author author, Textt textt, Category category) : base(id)
     {
         Author = author;
         Textt = textt;
         Category = category;
-        CreatedAt = DateTime.UtcNow; 
+        CreatedAt = DateTime.UtcNow;
     }
     
     public Author Author { get; private set; } = default!;

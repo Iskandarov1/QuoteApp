@@ -1,0 +1,53 @@
+# Build output
+/bin/
+/obj/
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Dotnet Core
+project.lock.json
+project.fragment.lock.json
+*.dbmdl
+*.jfm
+
+# Npm & Yarn
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets & local settings
+appsettings.Development.json
+.env
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/*
+
+# EF Migrations
+Migrations/
+
+# Rider caches
+.idea/
+*.sln.iml
+
+# JetBrains Rider
+.idea/

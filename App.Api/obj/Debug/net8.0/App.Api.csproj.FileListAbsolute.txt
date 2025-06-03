@@ -59,3 +59,4 @@
 /Users/iskandarovs/CleanDemo/App.Api/obj/Debug/net8.0/App.Api.pdb
 /Users/iskandarovs/CleanDemo/App.Api/obj/Debug/net8.0/App.Api.genruntimeconfig.cache
 /Users/iskandarovs/CleanDemo/App.Api/obj/Debug/net8.0/ref/App.Api.dll
+/Users/iskandarovs/CleanDemo/App.Api/obj/Debug/net8.0/App.Api.sourcelink.json

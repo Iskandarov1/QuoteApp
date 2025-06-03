@@ -1,16 +1,17 @@
 using App.Application.Abstractions.Messaging;
 using App.Contracts.Responses;
+using App.Domain.Abstractions;
+using App.Domain.Core.Primitives.Maybe;
 using App.Domain.Entities;
 
 namespace App.Application.Quotes.Commands.CreateQuote;
 
 public class CreateQuoteCommandHandler(IQuoteRepository quoteRepository)
-    : ICommandHandler<CreateQuoteCommand, QuoteResponse>
+    : ICommandHandler<CreateQuoteCommand, Maybe<Guid>>
 {
-    public async Task<QuoteResponse> Handle(CreateQuoteCommand request, CancellationToken cancellationToken)
+    public async Task<Maybe<Guid>> Handle(CreateQuoteCommand request, CancellationToken cancellationToken)
     {
-        var quote = new Quote(
-            Guid.NewGuid(),
+        var quote =  Quote.Create(
             new Author(request.Author),
             new Textt(request.Text),
             new Category(request.Category)
@@ -19,13 +20,7 @@ public class CreateQuoteCommandHandler(IQuoteRepository quoteRepository)
         await quoteRepository.AddAsync(quote, cancellationToken);
         await quoteRepository.SaveChangesAsync(cancellationToken);
 
-        return new QuoteResponse
-        {
-            Id = quote.Id,
-            Author = quote.Author.Value,
-            Text = quote.Textt.Value,
-            Category = quote.Category.Value,
-            CreatedAt = quote.CreatedAt
-        };
+
+        return Maybe<Guid>.From(quote.Id);
     }
 }

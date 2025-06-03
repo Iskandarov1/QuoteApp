@@ -9,3 +9,4 @@
 /Users/iskandarovs/CleanDemo/App.Domain/obj/Debug/net8.0/refint/App.Domain.dll
 /Users/iskandarovs/CleanDemo/App.Domain/obj/Debug/net8.0/App.Domain.pdb
 /Users/iskandarovs/CleanDemo/App.Domain/obj/Debug/net8.0/ref/App.Domain.dll
+/Users/iskandarovs/CleanDemo/App.Domain/obj/Debug/net8.0/App.Domain.sourcelink.json

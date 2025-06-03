@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using App.Domain.Abstractions;
+using App.Domain.Core.Primitives;
 using App.Domain.Core.Primitives.Maybe;
 
 namespace EventReminder.Domain.Core.Primitives.Maybe
@@ -9,6 +11,16 @@ namespace EventReminder.Domain.Core.Primitives.Maybe
     /// </summary>
     public static class MaybeExtensions
     {
+        
+        public static Result<T> Ensure<T>(this Result<T> result, Func<T, bool> predicate, Error error)
+        {
+            if (result.IsFailure)
+            {
+                return result;
+            }
+
+            return result.IsSuccess && predicate(result.Value) ? result : Result.Failure<T>(error);
+        }
         /// <summary>
         /// Binds to the result of the function and returns it.
         /// </summary>

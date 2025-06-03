@@ -7,7 +7,7 @@ namespace App.Api.Contracts
             public const string GetAll = "";
             public const string GetById = "{quoteId:guid}";
             public const string Create = "quotes";
-            public const string Update = "quotes/{quoteId: guid}";
+            public const string Update = "{quoteId:guid}";
             public const string Delete = "quotes/{quotesId:guid}";
         }
         public static class Subscriptions

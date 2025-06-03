@@ -9,3 +9,4 @@
 /Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/refint/App.Persistance.dll
 /Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.pdb
 /Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/ref/App.Persistance.dll
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.sourcelink.json

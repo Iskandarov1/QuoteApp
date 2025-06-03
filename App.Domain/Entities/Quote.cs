@@ -21,6 +21,15 @@ public class Quote : Entity
         Textt = textt;
         Category = category;
     }
+    
+    public static Quote Create(Author author, Textt textt, Category category)
+    {
+        return new Quote(
+            Guid.NewGuid(), 
+            author, 
+            textt,
+            category);
+    }
 
    
     

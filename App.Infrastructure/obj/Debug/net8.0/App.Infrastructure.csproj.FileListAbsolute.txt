@@ -19,3 +19,4 @@
 /Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/App.Infrastructure.pdb
 /Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/App.Infrastructure.genruntimeconfig.cache
 /Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/ref/App.Infrastructure.dll
+/Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/App.Infrastructure.sourcelink.json

@@ -9,3 +9,4 @@
 /Users/iskandarovs/CleanDemo/App.Contracts/obj/Debug/net8.0/refint/App.Contracts.dll
 /Users/iskandarovs/CleanDemo/App.Contracts/obj/Debug/net8.0/App.Contracts.pdb
 /Users/iskandarovs/CleanDemo/App.Contracts/obj/Debug/net8.0/ref/App.Contracts.dll
+/Users/iskandarovs/CleanDemo/App.Contracts/obj/Debug/net8.0/App.Contracts.sourcelink.json

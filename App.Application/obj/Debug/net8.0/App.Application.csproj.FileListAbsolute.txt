@@ -1,0 +1,17 @@
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.csproj.AssemblyReference.cache
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.AssemblyInfoInputs.cache
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.AssemblyInfo.cs
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.csproj.CoreCompileInputs.cache
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Application.deps.json
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Application.dll
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Application.pdb
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Contracts.dll
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Domain.dll
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Domain.pdb
+/Users/iskandarovs/CleanDemo/App.Application/bin/Debug/net8.0/App.Contracts.pdb
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Appl.090A7001.Up2Date
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.dll
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/refint/App.Application.dll
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/App.Application.pdb
+/Users/iskandarovs/CleanDemo/App.Application/obj/Debug/net8.0/ref/App.Application.dll

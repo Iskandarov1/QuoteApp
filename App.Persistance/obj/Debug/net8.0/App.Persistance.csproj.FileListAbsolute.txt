@@ -1,0 +1,11 @@
+/Users/iskandarovs/CleanDemo/App.Persistance/bin/Debug/net8.0/App.Persistance.deps.json
+/Users/iskandarovs/CleanDemo/App.Persistance/bin/Debug/net8.0/App.Persistance.dll
+/Users/iskandarovs/CleanDemo/App.Persistance/bin/Debug/net8.0/App.Persistance.pdb
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.AssemblyInfoInputs.cache
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.AssemblyInfo.cs
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.csproj.CoreCompileInputs.cache
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.dll
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/refint/App.Persistance.dll
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/App.Persistance.pdb
+/Users/iskandarovs/CleanDemo/App.Persistance/obj/Debug/net8.0/ref/App.Persistance.dll

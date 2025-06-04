@@ -3,15 +3,8 @@ using App.Domain.Core.Primitives;
 namespace App.Api.Contracts
 {
 
-    public class ApiErrorResponse
+    public class ApiErrorResponse(IReadOnlyCollection<Error> errors)
     {
-        public ApiErrorResponse(IReadOnlyCollection<Error> errors)
-        {
-            Errors = errors;
-
-        }
-        public IReadOnlyCollection<Error> Errors { get; }
-
-
+        public IReadOnlyCollection<Error> Errors { get; } = errors;
     }
 }

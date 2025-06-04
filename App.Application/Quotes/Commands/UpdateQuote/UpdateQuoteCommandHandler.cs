@@ -26,13 +26,12 @@ public class UpdateQuoteCommandHandler(IQuoteRepository quoteRepository) : IComm
         await quoteRepository.UpdateAsync(quote, cancellationToken);
         await quoteRepository.SaveChangesAsync(cancellationToken);
 
-        return new QuoteResponse
-        {
-            Id = quote.Id,
-            Author = quote.Author.Value,
-            Category = quote.Category.Value,
-            CreatedAt = quote.CreatedAt
-        };
+        return new QuoteResponse( 
+            quote.Id,
+            quote.Author.Value,
+            quote.Textt,
+            quote.Category.Value
+        );
 
 
     }

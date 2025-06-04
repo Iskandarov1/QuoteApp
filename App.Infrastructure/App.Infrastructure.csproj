@@ -18,11 +18,6 @@
   <ItemGroup>
     <ProjectReference Include="..\App.Domain\App.Domain.csproj" />
     <ProjectReference Include="..\App.Contracts\App.Contracts.csproj" />
-    <ProjectReference Include="..\App.Persistance\App.Persistance.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>

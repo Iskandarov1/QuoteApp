@@ -1,7 +1,8 @@
 # Build output
 /bin/
 /obj/
-
+Debug/
+Release/
 # VS Code
 .vscode/
 
@@ -14,6 +15,14 @@
 *.user
 *.userosscache
 *.sln.docstates
+
+*.dll
+*.cache
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
 
 # Dotnet Core
 project.lock.json
@@ -42,12 +51,6 @@ appsettings.Development.json
 # except build/, which is used as an MSBuild target.
 !**/packages/build/*
 
-# EF Migrations
 Migrations/
-
-# Rider caches
-.idea/
 *.sln.iml
 
-# JetBrains Rider
-.idea/

@@ -37,7 +37,6 @@ public class QuoteController(IMediator mediator) : ApiController(mediator)
             .Bind(query => Mediator.Send(query))
             .Match(Ok, NotFound);
     
-    
     [HttpPut(ApiRoutes.Quotes.Update)]
     [ProducesResponseType(typeof(QuoteResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]

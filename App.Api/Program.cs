@@ -1,7 +1,8 @@
 using App.Application.Quotes.Queries.GetAllQuote;
 using App.Domain.Entities;
-using App.Infrastructure.Extentions;
-using App.Infrastructure.Repositories;
+using App.Persistance.Extentions;
+using App.Persistance.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

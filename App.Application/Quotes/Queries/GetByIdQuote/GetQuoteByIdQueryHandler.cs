@@ -11,19 +11,20 @@ public class GetQuoteByIdQueryHandler(IQuoteRepository quoteRepository)
     public async Task<Maybe<QuoteResponse>> Handle(GetQuoteByIdQuery request, CancellationToken cancellationToken)
     {
         var quote = await quoteRepository.GetByIdAsync(request.QuoteId, cancellationToken);
-        
-        if (quote == null)
-        {
-            throw new InvalidOperationException($"Quote with ID {request.QuoteId} not found");
-        }
 
-        return new QuoteResponse
+        if (quote != null)
         {
-            Id = quote.Id,
-            Author = quote.Author.Value,
-            Text = quote.Textt.Value,
-            Category = quote.Category.Value,
-            CreatedAt = quote.CreatedAt
-        };
+            var response = new QuoteResponse(
+                quote.Id,
+                quote.Author.Value, 
+                quote.Textt.Value,
+                quote.Category.Value);
+
+            return Maybe<QuoteResponse>.From(response);
+        }
+        else
+        {
+            return Maybe<QuoteResponse>.None;
+        }
     }
 }

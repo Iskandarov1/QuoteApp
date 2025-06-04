@@ -4,10 +4,8 @@
 /Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Infrastructure.pdb
 /Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Contracts.dll
 /Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Domain.dll
-/Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Persistance.dll
 /Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Domain.pdb
 /Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Contracts.pdb
-/Users/iskandarovs/CleanDemo/App.Infrastructure/bin/Debug/net8.0/App.Persistance.pdb
 /Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/App.Infrastructure.csproj.AssemblyReference.cache
 /Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/App.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 /Users/iskandarovs/CleanDemo/App.Infrastructure/obj/Debug/net8.0/App.Infrastructure.AssemblyInfoInputs.cache

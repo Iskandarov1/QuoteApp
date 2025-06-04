@@ -1,13 +1,13 @@
 using App.Domain.Entities;
 using App.Infrastructure.Data;
-using App.Infrastructure.Repositories;
+using App.Persistance.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace App.Infrastructure.Extentions;
+namespace App.Persistance.Extentions;
 
 public static class ServiceCollectionExtensions
 {
@@ -51,7 +51,7 @@ public static class ServiceCollectionExtensions
             options.UseLoggerFactory(loggerFactory);
         });
 
-        services.AddScoped<IQuoteRepository, EfQuoteRepository>();
+        services.AddScoped<IQuoteRepository, QuoteRepository>();
 
         return services;
     }

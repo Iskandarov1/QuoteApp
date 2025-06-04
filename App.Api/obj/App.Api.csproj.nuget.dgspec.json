@@ -37,6 +37,9 @@
               },
               "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj": {
                 "projectPath": "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj"
               }
             }
           }
@@ -320,9 +323,6 @@
               },
               "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj": {
                 "projectPath": "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj"
-              },
-              "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj": {
-                "projectPath": "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj"
               }
             }
           }
@@ -398,7 +398,17 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -415,6 +425,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

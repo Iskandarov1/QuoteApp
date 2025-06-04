@@ -10,7 +10,6 @@
         "dependencies": {
           "App.Contracts": "1.0.0",
           "App.Domain": "1.0.0",
-          "App.Persistance": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.5",
           "Microsoft.EntityFrameworkCore.Design": "9.0.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
@@ -666,14 +665,6 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "App.Persistance/1.0.0": {
-        "runtime": {
-          "App.Persistance.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -990,11 +981,6 @@
       "sha512": ""
     },
     "App.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "App.Persistance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

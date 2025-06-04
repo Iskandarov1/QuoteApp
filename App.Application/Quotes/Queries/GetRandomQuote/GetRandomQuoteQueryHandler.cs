@@ -18,14 +18,11 @@ public class GetRandomQuoteQueryHandler(IQuoteRepository quoteRepository) : IQue
         var randomIndex = new Random().Next(allQuotes.Count);
         var q = allQuotes[randomIndex];
 
-        var respone = new QuoteResponse
-        {
-            Id = q.Id,
-            Author = q.Author.Value,
-            Text = q.Textt.Value,
-            Category = q.Category.Value,
-            CreatedAt = q.CreatedAt
-        };
+        var respone = new QuoteResponse(
+            q.Id,
+            q.Author.Value,
+            q.Textt.Value,
+            q.Category.Value);
 
         return Maybe<QuoteResponse>.From(respone);
 

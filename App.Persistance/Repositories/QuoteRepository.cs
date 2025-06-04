@@ -2,9 +2,9 @@ using App.Domain.Entities;
 using App.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace App.Infrastructure.Repositories;
+namespace App.Persistance.Repositories;
 
-public class EfQuoteRepository(ApplicationDbContext context) : IQuoteRepository
+public class QuoteRepository(ApplicationDbContext context) : IQuoteRepository
 {
     public async Task<Quote?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {

@@ -12,6 +12,7 @@
           "App.Contracts": "1.0.0",
           "App.Domain": "1.0.0",
           "App.Infrastructure": "1.0.0",
+          "App.Persistance": "1.0.0",
           "Asp.Versioning.Abstractions": "8.1.0",
           "MediatR": "12.5.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.10",
@@ -777,7 +778,6 @@
         "dependencies": {
           "App.Contracts": "1.0.0",
           "App.Domain": "1.0.0",
-          "App.Persistance": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
         },
@@ -789,6 +789,12 @@
         }
       },
       "App.Persistance/1.0.0": {
+        "dependencies": {
+          "App.Contracts": "1.0.0",
+          "App.Domain": "1.0.0",
+          "App.Infrastructure": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.5"
+        },
         "runtime": {
           "App.Persistance.dll": {
             "assemblyVersion": "1.0.0",

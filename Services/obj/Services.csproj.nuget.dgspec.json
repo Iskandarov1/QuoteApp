@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj": {}
+    "/Users/iskandarovs/CleanDemo/Services/Services.csproj": {}
   },
   "projects": {
     "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj": {
@@ -187,6 +187,168 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj",
+        "projectName": "App.Persistance",
+        "projectPath": "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj",
+        "packagesPath": "/Users/iskandarovs/.nuget/packages/",
+        "outputPath": "/Users/iskandarovs/CleanDemo/App.Persistance/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/iskandarovs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/iskandarovs/CleanDemo/Services/Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/iskandarovs/CleanDemo/Services/Services.csproj",
+        "projectName": "Services",
+        "projectPath": "/Users/iskandarovs/CleanDemo/Services/Services.csproj",
+        "packagesPath": "/Users/iskandarovs/.nuget/packages/",
+        "outputPath": "/Users/iskandarovs/CleanDemo/Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/iskandarovs/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Infrastructure/App.Infrastructure.csproj"
+              },
+              "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Persistance/App.Persistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.5, )"
             }
           },
           "imports": [

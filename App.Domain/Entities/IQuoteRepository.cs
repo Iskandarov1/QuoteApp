@@ -8,4 +8,6 @@ public interface IQuoteRepository
     Task UpdateAsync(Quote quote, CancellationToken cancellationToken = default);
     Task DeleteAsync(Quote quote, CancellationToken cancellationToken = default);
     Task SaveChangesAsync(CancellationToken cancellationToken = default);
+    Task<int> DeleteQuotesOlderThanAsync(DateTime cutoffDate, CancellationToken cancellationToken = default);
+
 }

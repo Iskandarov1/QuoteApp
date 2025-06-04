@@ -40,4 +40,10 @@ public class QuoteRepository(ApplicationDbContext context) : IQuoteRepository
     {
         await context.SaveChangesAsync(cancellationToken);
     }
+    public async Task<int> DeleteQuotesOlderThanAsync(DateTime cutoffDate, CancellationToken cancellationToken = default)
+    {
+        return await context.Quotes
+            .Where(q => q.CreatedAt < cutoffDate)
+            .ExecuteDeleteAsync(cancellationToken);
+    }
 }

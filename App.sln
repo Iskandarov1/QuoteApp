@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4EDD648E-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{728C5918-C514-4D08-991E-8F15C9AE64C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{8022CA0A-37E9-49E9-87F8-675EF7D05A8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{E5E13207-640E-4BD1-87DD-691948EE8EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5E13207-640E-4BD1-87DD-691948EE8EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5E13207-640E-4BD1-87DD-691948EE8EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8022CA0A-37E9-49E9-87F8-675EF7D05A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8022CA0A-37E9-49E9-87F8-675EF7D05A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8022CA0A-37E9-49E9-87F8-675EF7D05A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8022CA0A-37E9-49E9-87F8-675EF7D05A8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{80A270D5-E2AD-43DE-8D84-469875B6CA15} = {728C5918-C514-4D08-991E-8F15C9AE64C4}

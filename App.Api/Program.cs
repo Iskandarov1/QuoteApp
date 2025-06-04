@@ -2,6 +2,7 @@ using App.Application.Quotes.Queries.GetAllQuote;
 using App.Domain.Entities;
 using App.Persistance.Extentions;
 using App.Persistance.Repositories;
+using Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,17 +13,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
+builder.Services.AddHostedService<Worker>();
+
 builder.Services.AddMediatR(cfg => {
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(GetAllQuotesQuery).Assembly);
 });
 
-
-//  MediatR registration
-builder.Services.AddMediatR(cfg => {
-    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
-    cfg.RegisterServicesFromAssembly(typeof(GetAllQuotesQuery).Assembly);
-});
 
 var app = builder.Build();
 

@@ -12,13 +12,12 @@ public class CreateQuoteCommandHandler(IQuoteRepository quoteRepository) :IComma
     {
         var quote = Quote.Create(
             new Author(request.Author) ,
-             new Textt(request.Text),
+            new Textt(request.Text),
             new Category(request.Category));
 
         await quoteRepository.AddAsync(quote);
         await quoteRepository.SaveChangesAsync(cancellationToken);
-
-
+        
         return Maybe<Guid>.From(quote.Id);
     }
 }

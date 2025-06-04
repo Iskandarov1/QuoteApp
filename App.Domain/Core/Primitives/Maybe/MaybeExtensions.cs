@@ -18,7 +18,7 @@ namespace EventReminder.Domain.Core.Primitives.Maybe
             {
                 return result;
             }
-
+            
             return result.IsSuccess && predicate(result.Value) ? result : Result.Failure<T>(error);
         }
         /// <summary>

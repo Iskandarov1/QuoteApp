@@ -18,7 +18,8 @@ public class GetQuoteByIdQueryHandler(IQuoteRepository quoteRepository)
                 quote.Id,
                 quote.Author.Value, 
                 quote.Textt.Value,
-                quote.Category.Value);
+                quote.Category.Value)
+            { CreatedAt = quote.CreatedAt};
 
             return Maybe<QuoteResponse>.From(response);
         }

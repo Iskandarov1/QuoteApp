@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-Services-800635bb-71ab-4426-9353-c131dad9fb6f</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\App.Domain\App.Domain.csproj" />
+        <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj" />
+        <ProjectReference Include="..\App.Persistance\App.Persistance.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.5" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.5" />
+      <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.5" />
+    </ItemGroup>
+</Project>

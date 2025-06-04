@@ -17,7 +17,9 @@ public class GetAllQuotesQueryHandler(IQuoteRepository quoteRepository)
             q.Id,
             q.Author.Value,
             q.Textt,
-            q.Category)).ToList();
+            q.Category){
+                CreatedAt = q.CreatedAt
+            }).ToList();
 
         if (!items.Any())
         {

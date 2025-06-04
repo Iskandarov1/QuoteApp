@@ -9,7 +9,6 @@ public class UpdateQuoteCommandHandler(IQuoteRepository quoteRepository) : IComm
 {
     public async Task<Maybe<QuoteResponse>> Handle(UpdateQuoteCommand request, CancellationToken cancellationToken)
     {
-        //got the quote id
         var quote = await quoteRepository.GetByIdAsync(request.Id, cancellationToken);
 
         if (quote==null)
@@ -29,7 +28,7 @@ public class UpdateQuoteCommandHandler(IQuoteRepository quoteRepository) : IComm
         return new QuoteResponse( 
             quote.Id,
             quote.Author.Value,
-            quote.Textt,
+            quote.Textt.Value,
             quote.Category.Value
         );
 

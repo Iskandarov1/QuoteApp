@@ -5,28 +5,27 @@ using App.Domain.Entities;
 
 namespace App.Application.Quotes.Queries.GetRandomQuote;
 
-public class GetRandomQuoteQueryHandler(IQuoteRepository quoteRepository) : IQueryHandler<GetRandomQuoteQuery, Maybe<QuoteResponse>>
+public class GetRandomQuoteQueryHandler(IQuoteRepository quoteRepository)
+    : IQueryHandler<GetRandomQuoteQuery, Maybe<QuoteResponse>>
 {
     public async Task<Maybe<QuoteResponse>> Handle(GetRandomQuoteQuery request, CancellationToken cancellationToken)
     {
         var allQuotes = (await quoteRepository.GetAllAsync(cancellationToken)).ToList();
-        if (!allQuotes.Any() )
+
+        if (!allQuotes.Any())
         {
             return Maybe<QuoteResponse>.None;
         }
-
         var randomIndex = new Random().Next(allQuotes.Count);
         var q = allQuotes[randomIndex];
 
-        var respone = new QuoteResponse(
+
+        var response = new QuoteResponse(
             q.Id,
             q.Author.Value,
             q.Textt.Value,
             q.Category.Value);
 
-        return Maybe<QuoteResponse>.From(respone);
-
-
-
+        return Maybe<QuoteResponse>.From(response);
     }
 }

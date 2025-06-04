@@ -52,6 +52,7 @@ public static class ServiceCollectionExtensions
         });
 
         services.AddScoped<IQuoteRepository, QuoteRepository>();
+        
 
         return services;
     }

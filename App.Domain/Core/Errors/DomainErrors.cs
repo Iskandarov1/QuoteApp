@@ -35,7 +35,14 @@ namespace App.Domain.Core.Errors
             public static Error NotFound => new Error("Category.NotFound", "The category with the specified identifier was not found.");
         }
 
-       
+        public static class PhoneNumber
+        {
+            public static Error NullOrEmpty => new Error("PhoneNumber.NullOrEmpty", "The phone number is required.");
+        
+            public static Error InvalidLength => new Error("PhoneNumber.InvalidLength", "The phone number must be between 10 and 15 digits.");
+        
+            public static Error InvalidFormat => new Error("PhoneNumber.InvalidFormat", "The phone number format is invalid.");
+        }
 
       
 

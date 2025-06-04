@@ -62,11 +62,6 @@ public class Worker(
                 logger.LogError(ex, "Failed to cleanup old quotes");
                 throw;
             }
-}
-
-      
-
-
-
-    
+     }
+     
 }

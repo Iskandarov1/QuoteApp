@@ -9,7 +9,6 @@ using App.Application.Quotes.Queries.GetRandomQuote;
 using App.Contracts.Requests;
 using App.Domain.Abstractions;
 using App.Domain.Core.Primitives.Maybe;
-using EventReminder.Domain.Core.Primitives.Maybe;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

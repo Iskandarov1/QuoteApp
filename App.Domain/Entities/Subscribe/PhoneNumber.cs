@@ -2,7 +2,6 @@ using System.Text.RegularExpressions;
 using App.Domain.Core.Errors;
 using App.Domain.Core.Primitives;
 using App.Domain.Core.Result;
-using System.Text.RegularExpressions;
 
 namespace App.Domain.Entities.Subscribe;
 
@@ -28,7 +27,7 @@ public sealed class PhoneNumber : ValueObject
         if (!PhoneRegex.IsMatch(phoneNumber))
             return Result.Failure<PhoneNumber>(DomainErrors.PhoneNumber.InvalidFormat);
             
-        return new PhoneNumber(phoneNumber);
+        return new PhoneNumber(cleaned);
     }
 
     protected override IEnumerable<object> GetAtomicValues()

@@ -321,6 +321,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "/Users/iskandarovs/CleanDemo/App.Application/App.Application.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Application/App.Application.csproj"
+              },
               "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj": {
                 "projectPath": "/Users/iskandarovs/CleanDemo/App.Contracts/App.Contracts.csproj"
               },
@@ -490,6 +493,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "/Users/iskandarovs/CleanDemo/App.Application/App.Application.csproj": {
+                "projectPath": "/Users/iskandarovs/CleanDemo/App.Application/App.Application.csproj"
+              },
               "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj": {
                 "projectPath": "/Users/iskandarovs/CleanDemo/App.Domain/App.Domain.csproj"
               },

@@ -8,7 +8,7 @@ public class Worker(
     IServiceProvider serviceProvider) : BackgroundService
 {
     private readonly TimeSpan _interval = TimeSpan.FromMinutes(1);
-    private readonly TimeSpan _retentionPeriod = TimeSpan.FromHours(24);
+    private readonly TimeSpan _retentionPeriod = TimeSpan.FromMinutes(1);
 
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -19,13 +19,10 @@ public class Worker(
             try
             {
                 await CleanupOldQuotes(stoppingToken);
-                
-
             }
             catch (Exception e)
             {
                 logger.LogError(e, "Error occured during the clean up");
-
             }
             await Task.Delay(_interval, stoppingToken);
         }
@@ -54,7 +51,7 @@ public class Worker(
                 }
                 else
                 {
-                    logger.LogInformation("No quotes found older than {Hours} hours", _retentionPeriod.TotalHours);
+                    logger.LogInformation("No quotes found older than {Minutes}", _retentionPeriod.Minutes);
                 }
             }
             catch (Exception ex)

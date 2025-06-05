@@ -32,6 +32,12 @@ public class Subscriber: Entity
         return subscriber;
     }
 
+    public void UpdateNotificationSent(string quoteText, string author)
+    {
+        LastNotificationSent = DateTime.UtcNow;
+        LastSentQuoteText = quoteText;
+        LastSentQuoteAuthor = author;
+    }
     public void Deactivate()
     {
         IsActive = false;
@@ -49,6 +55,9 @@ public class Subscriber: Entity
     public bool IsActive { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime? LastNotificationSent { get; private set; }
+    
+    public string? LastSentQuoteText { get; private set; }
+    public string? LastSentQuoteAuthor { get; private set; }
     
     
     public enum NotificationPreference

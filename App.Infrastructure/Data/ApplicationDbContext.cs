@@ -1,4 +1,5 @@
 using App.Domain.Entities;
+using App.Domain.Entities.Quots;
 using App.Domain.Entities.Subscribe;
 using Microsoft.EntityFrameworkCore;
 

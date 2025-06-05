@@ -17,8 +17,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddScoped<ISubscriberRepository, SubscriberRepository>();
-builder.Services.AddScoped<IEmailService, MockEmailService>();
-builder.Services.AddScoped<ISmsService, MockSmsService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ISmsService, SmsService>();
 
 builder.Services.AddHostedService<Worker>();
 builder.Services.AddHostedService<DailyQuoteNotificationWorker>();

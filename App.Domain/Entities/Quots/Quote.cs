@@ -1,5 +1,7 @@
-namespace App.Domain.Entities;
 using App.Domain.Abstractions;
+
+namespace App.Domain.Entities.Quots;
+
 public class Quote : Entity
 {
     private Quote(): base(Guid.Empty){}

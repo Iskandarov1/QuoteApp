@@ -1,4 +1,4 @@
-namespace App.Contracts.Requests;
+namespace App.Contracts.Requests.SubscribeRequest;
 
 public class CreateSubscriptionRequest
 {

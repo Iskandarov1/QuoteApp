@@ -16,6 +16,7 @@ namespace App.Api.Contracts
             public const string Subscribe = "subscriptions";
             public const string Unsubscribe = "subscriptions/{subscriptionId:guid}";
             public const string GetSentNotification = "sent";
+            public const string GetMyNotifications = "my-notifications";
         }
 
     }

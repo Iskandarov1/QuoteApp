@@ -7,6 +7,7 @@ using App.Application.Quotes.Queries.GetAllQuote;
 using App.Application.Quotes.Queries.GetByIdQuote;
 using App.Application.Quotes.Queries.GetRandomQuote;
 using App.Contracts.Requests;
+using App.Contracts.Requests.QuoteRequest;
 using App.Domain.Abstractions;
 using App.Domain.Core.Primitives.Maybe;
 using MediatR;

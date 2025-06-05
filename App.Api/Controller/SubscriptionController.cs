@@ -4,6 +4,7 @@ using App.Application.Quotes.Commands.CreateSubscription;
 using App.Application.Quotes.Commands.RemoveSubscription;
 using App.Application.Quotes.Queries.GetSentNotifications;
 using App.Contracts.Requests;
+using App.Contracts.Requests.SubscribeRequest;
 using App.Contracts.Responses;
 using App.Contracts.Responses.EmailQuoteResponse;
 using App.Domain.Core.Primitives.Maybe;
@@ -43,10 +44,9 @@ public class SubscriptionController(IMediator mediator) : ApiController(mediator
             .Bind(query => Mediator.Send(query))
             .Match(Ok, NotFound);
 
-    [HttpGet("my-notifications")]
+    [HttpGet(ApiRoutes.Subscriptions.GetMyNotifications)]
     [ProducesResponseType(typeof(SentNotificationResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-
     public async Task<IActionResult> GetMyNotifications(
         [FromQuery] string? email,
         [FromQuery] string? phoneNumber) =>

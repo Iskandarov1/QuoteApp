@@ -1,6 +1,7 @@
 using App.Application.Abstractions.Messaging;
 using App.Domain.Core.Primitives.Maybe;
 using App.Domain.Entities;
+using App.Domain.Entities.Quots;
 
 namespace App.Application.Quotes.Commands.DeleteQuote;
 

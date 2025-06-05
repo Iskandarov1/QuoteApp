@@ -1,11 +1,7 @@
-using App.Application.Abstractions;
 using App.Application.Abstractions.Messaging;
 using App.Application.Quotes.Queries.GetRandomQuote;
 using App.Domain.Entities.Subscribe;
 using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Services;
 
@@ -13,7 +9,6 @@ public class DailyQuoteNotificationWorker(
     ILogger<DailyQuoteNotificationWorker> logger,
     IServiceProvider serviceProvider) : BackgroundService
 {
-    // Change from 30 seconds to 1 minute
     private readonly TimeSpan _checkInterval = TimeSpan.FromMinutes(1);
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -25,10 +20,7 @@ public class DailyQuoteNotificationWorker(
                 logger.LogInformation("🔄 Quote notification cycle starting at {Time}", DateTimeOffset.UtcNow);
 
                 await SendDailyQuotesToSubscribers(stoppingToken);
-                // if (ShouldSendDailyQuotes())
-                // {
-                //     
-                // }
+                
             }
             catch (Exception e)
             {
@@ -57,8 +49,7 @@ public class DailyQuoteNotificationWorker(
 
         try
         {
-            // For demo purposes, get ALL active subscribers instead of those who 
-            // haven't received a notification today
+           
             var subscribers = await subscriberRepository.GetActiveSubscribersAsync(cancellationToken);
             
             if (!subscribers.Any())
@@ -92,7 +83,7 @@ public class DailyQuoteNotificationWorker(
                             "Your Quote of the Minute",
                             emailContent,
                             cancellationToken);
-                        logger.LogInformation("📧 Quote sent to {Email}: \"{Quote}\" by {Author}", 
+                        logger.LogInformation(" Quote sent to {Email}: \"{Quote}\" by {Author}", 
                             subscriber.Email.Value, quote.Text, quote.Author);
                     }
                     else if (subscriber.PreferredNotificationMethod == Subscriber.NotificationPreference.Sms && subscriber.PhoneNumber != null)
@@ -116,7 +107,7 @@ public class DailyQuoteNotificationWorker(
             }
 
             await subscriberRepository.SaveChangesAsync(cancellationToken);
-            logger.LogInformation("✅ Successfully sent quotes to {Count} subscribers", successCount);
+            logger.LogInformation(" Successfully sent quotes to {Count} subscribers", successCount);
         }
         catch (Exception ex)
         {

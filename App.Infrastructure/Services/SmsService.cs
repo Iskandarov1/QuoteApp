@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace App.Infrastructure.Services;
 
-public class MockSmsService(ILogger<MockSmsService> logger) : ISmsService
+public class SmsService(ILogger<SmsService> logger) : ISmsService
 {
     public Task SendSmsAsync(string to, string message, CancellationToken cancellationToken = default)
     {

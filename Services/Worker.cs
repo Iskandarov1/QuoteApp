@@ -1,4 +1,5 @@
 using App.Domain.Entities;
+using App.Domain.Entities.Quots;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 namespace Services;

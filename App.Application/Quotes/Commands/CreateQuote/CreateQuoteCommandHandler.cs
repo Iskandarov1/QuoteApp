@@ -3,6 +3,7 @@ using App.Contracts.Responses;
 using App.Domain.Abstractions;
 using App.Domain.Core.Primitives.Maybe;
 using App.Domain.Entities;
+using App.Domain.Entities.Quots;
 
 namespace App.Application.Quotes.Commands.CreateQuote;
 

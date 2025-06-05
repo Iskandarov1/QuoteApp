@@ -1,4 +1,5 @@
 using App.Domain.Entities;
+using App.Domain.Entities.Quots;
 using App.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 

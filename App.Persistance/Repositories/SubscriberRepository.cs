@@ -20,18 +20,18 @@ public class SubscriberRepository(ApplicationDbContext context) : ISubscriberRep
 
     public async Task<Subscriber?> GetByPhoneNumber(string phoneNumber, CancellationToken cancellationToken = default)
     {
-        var subscribers = await context.Subscribers
-            .Where(s => s.PhoneNumber != null)
-            .ToListAsync(cancellationToken);
-            
-        foreach (var sub in subscribers)
-        {
-            Console.WriteLine($"DB Phone: '{sub.PhoneNumber?.Value}', Looking for: '{phoneNumber}'");
-        }
-        
+        var phoneResult = PhoneNumber.Create(phoneNumber);
+        if (phoneResult.IsFailure)
+            return null;
+
+        var cleaned = phoneResult.Value.Value;
         return await context.Subscribers
-            .FirstOrDefaultAsync(s => s.PhoneNumber != null && s.PhoneNumber.Value == phoneNumber, cancellationToken);
+            .FirstOrDefaultAsync(s =>
+                    s.PhoneNumber != null &&
+                    s.PhoneNumber.Value == cleaned,
+                cancellationToken);
     }
+
 
     public async Task<IEnumerable<Subscriber>> GetActiveSubscribersAsync(CancellationToken cancellationToken = default)
     {

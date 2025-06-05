@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace App.Infrastructure.Services;
 
-public class MockEmailService(ILogger<MockEmailService> logger) : IEmailService
+public class EmailService(ILogger<EmailService> logger) : IEmailService
 {
     public Task SendEmailAsync(string to, string subject, string body, CancellationToken cancellationToken = default)
     {

@@ -1,4 +1,4 @@
-namespace App.Domain.Entities;
+namespace App.Domain.Entities.Quots;
 
 public interface IQuoteRepository
 {
